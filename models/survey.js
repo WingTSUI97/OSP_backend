@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const specificSchema = mongoose.Schema(
+const specificSchema = new mongoose.Schema(
     {
         // Optional optional constraints
         maxLength: Number,
@@ -18,7 +18,7 @@ const specificSchema = mongoose.Schema(
     }
 );
 
-const questionSchema = mongoose.Schema(
+const questionSchema = new mongoose.Schema(
     {
         text: {
             type: String,
@@ -37,14 +37,14 @@ const questionSchema = mongoose.Schema(
 
 );
 
-const surveySchema = mongoose.Schema(
+const surveySchema = new mongoose.Schema(
     {
         title: {
-            type: string,
+            type: String,
             required: true
         },
         token: {
-            type: string,
+            type: String,
             required: true
 
         },

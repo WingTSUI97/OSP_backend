@@ -13,7 +13,10 @@ Build a small RESTful API server for creating surveys, retrieving them by a publ
 - [git](https://docs.github.com/en/get-started/git-basics/set-up-git)
 
 ## Installation
+- (optional) Install [NodeJS](https://nodejs.org/en) if needed
 - `git clone https://github.com/WingTSUI97/OSP_backend`
+- `cd OSP_backend`
+- `npm install`
 
 ### GET Routes
 - visit http://localhost:3000

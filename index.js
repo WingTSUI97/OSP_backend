@@ -1,5 +1,7 @@
 import express from 'express'
 import mongoose from 'mongoose';
+import Survey from './models/Survey.js';
+import Response from './models/Response.js';
 
 const app = express()
 
