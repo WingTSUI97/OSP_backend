@@ -17,6 +17,11 @@ Build a small RESTful API server for creating surveys, retrieving them by a publ
 - `git clone https://github.com/WingTSUI97/OSP_backend`
 - `cd OSP_backend`
 - `npm install`
+- Create a .env file in the root directory and add your MongoDB connection string:
+   ```bash
+   MONGO_URI=your_mongodb_connection_string
+
+   ```
 
 ### GET Routes
 - visit http://localhost:3000
