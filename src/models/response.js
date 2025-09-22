@@ -7,10 +7,9 @@ const answerSchema = new mongoose.Schema(
             required: true
         },
         // The actual value of the answer (e.g., text, multiple-choice option).
-        isValid: {
-            type: Boolean,
-            required: true,
-            default: false
+        value: {
+            type: mongoose.Schema.Types.Mixed,
+            required: true
         }
     },
     {

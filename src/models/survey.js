@@ -26,10 +26,10 @@ const questionSchema = new mongoose.Schema(
         },
         type: {
             type: String,
-            enum: ['TEXTBOX', 'MULTIPLE_CHOICE-choice', 'LIKERT'],             
+            enum: ['TEXTBOX', 'MULTIPLE_CHOICE_choice', 'LIKERT'],             
             required: true
         },
-        sepc: specificSchema    
+        spec: specificSchema    
     },
     {
         _id: false
@@ -58,4 +58,3 @@ const surveySchema = new mongoose.Schema(
 const Survey = mongoose.model('Survey', surveySchema);
 
 module.exports = Survey;
-// End of survey.js file
