@@ -1,6 +1,9 @@
 const express = require('express');
 const dotenv = require('dotenv').config();
-const dbConnect = require('./config/dbConnect');   
+const dbConnect = require('./config/dbConnect');
+
+const adminRoutes = require('./routes/adminRoutes');
+const participantRoutes = require('./routes/participantRoutes');
 
 //Database connection
 dbConnect();
@@ -11,8 +14,8 @@ const app = express()
 app.use(express.json())
 
 //Routes
-// app.use('/api/users', require('./routes/userRoutes'));
-// app.use('/api/auth', require('./routes/authRoutes'));
+app.use('/api/admin', adminRoutes);
+app.use('/api/participant', participantRoutes);
 
 //Start the server
 const PORT = process.env.PORT || 7002; // Default to 7002 if PORT is not set
