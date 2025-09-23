@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const specificSchema = new mongoose.Schema(
     {
-        // Optional optional constraints
+        // Optional  constraints
         maxLength: Number,
 
         // array of strings for MULTIPLE_CHOICE type
