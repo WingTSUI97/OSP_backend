@@ -30,11 +30,7 @@ const questionSchema = new mongoose.Schema(
             required: true
         },
         spec: specificSchema    
-    },
-    {
-        _id: false
     }
-
 );
 
 const surveySchema = new mongoose.Schema(

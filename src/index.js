@@ -15,7 +15,7 @@ app.use(express.json())
 
 //Routes
 app.use('/api/admin', adminRoutes);
-app.use('/api/participant', participantRoutes);
+app.use('/api', participantRoutes);
 
 //Start the server
 const PORT = process.env.PORT || 7002; // Default to 7002 if PORT is not set

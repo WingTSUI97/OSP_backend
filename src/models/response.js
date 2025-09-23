@@ -28,6 +28,9 @@ const responseSchema = new mongoose.Schema(
     },
     {
         timestamps: true
+    },
+    {
+        _id: false
     }
 );
 
