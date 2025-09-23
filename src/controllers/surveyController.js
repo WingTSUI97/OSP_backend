@@ -1,5 +1,5 @@
 const Survey = require('../models/survey');
-const { generateToken } = require('../utils/tokenGenerator');
+const generateToken = require('../utils/tokenGenerator');
 
 const createSurvey = async (req, res) => {
     try {
@@ -17,6 +17,7 @@ const createSurvey = async (req, res) => {
 
         const newSurvey = new Survey({ title, token, questions });
         await newSurvey.save();
+        console.log('Survey created successfully');
         res
             .status(201)
             .json({ message: 'Survey created successfully', survey: newSurvey });
@@ -66,7 +67,7 @@ const updateSurvey = async (req, res) => {
         if (!updateSurvey) {
             return res.status(404).json({ message: 'Survey not found' });
         };
-
+        console.log('Survey updated successfully')
         res.status(200).json({
             message: 'Survey updated successfully',
             survey: updateSurvey
@@ -90,6 +91,7 @@ const deleteSurvey = async (req, res) => {
             return res.status(404).json({ message: 'Survey not found' });
         }
 
+        console.log('Survey deleted successfully')
         res.status(200).json({
             message: 'Survey deleted successfully',
             survey: deletedSurvey
@@ -109,7 +111,7 @@ const getSurveyByToken = async (req, res) => {
         if (!survey) {
             return res.status(404).json({ message: 'Survey not found' });
         }
-        res.status(200).json({ survey });  
+        res.status(200).json({ survey });
 
     } catch (error) {
         console.error('Error fetching survey by token:', error);

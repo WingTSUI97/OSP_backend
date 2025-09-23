@@ -10,9 +10,11 @@ const authMiddleware = (req, res, next) => {
     }
     // attach the admin role to the request object
     req.user = { role: 'Admin' };
-    
+
+    console.log('API key validated, user role set to Admin');
     // pass control to the next middleware or route handler
     next();
+
 };
 
 module.exports = authMiddleware;

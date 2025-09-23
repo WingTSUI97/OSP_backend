@@ -6,7 +6,7 @@ const dbConnect = async () => {
         const DB_CONNECT = process.env.MONGO_URI || process.env.TESTING_DB; // Use TESTING_DB as fallback
         const connect = await mongoose.connect(DB_CONNECT)
         console.log(
-            `Databasee connected: ${connect.connection.host}, ${connect.connection.name}`
+            `Databasee connected: ${connect.connection.host}, ${connect.connection.name}\nMongoDB connected successfully.`
         );
 
     } catch (error) {

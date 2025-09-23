@@ -26,7 +26,7 @@ const questionSchema = new mongoose.Schema(
         },
         type: {
             type: String,
-            enum: ['TEXTBOX', 'MULTIPLE_CHOICE_choice', 'LIKERT'],             
+            enum: ['TEXTBOX', 'MULTIPLE_CHOICE', 'LIKERT'],             
             required: true
         },
         spec: specificSchema    
