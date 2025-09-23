@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const specificSchema = new mongoose.Schema(
     {
-        // Optional  constraints
+        // Optional  constraints for TEXTBOX type
         maxLength: Number,
 
         // array of strings for MULTIPLE_CHOICE type
