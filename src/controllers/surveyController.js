@@ -13,7 +13,7 @@ const createSurvey = async (req, res) => {
             }
         }
 
-        const token = generateToken();
+        const token = await generateToken();
 
         const newSurvey = new Survey({ title, token, questions });
         await newSurvey.save();
@@ -111,6 +111,7 @@ const getSurveyByToken = async (req, res) => {
         if (!survey) {
             return res.status(404).json({ message: 'Survey not found' });
         }
+        console.log('Survey Found')
         res.status(200).json({ survey });
 
     } catch (error) {

@@ -6,7 +6,9 @@ const adminRoutes = require('./routes/adminRoutes');
 const participantRoutes = require('./routes/participantRoutes');
 
 //Database connection
-dbConnect();
+if (process.env.NODE_ENV !== 'test') {
+  dbConnect();
+}
 
 const app = express()
 
@@ -17,8 +19,4 @@ app.use(express.json())
 app.use('/api/admin', adminRoutes);
 app.use('/api', participantRoutes);
 
-//Start the server
-const PORT = process.env.PORT || 7002; // Default to 7002 if PORT is not set
-app.listen(PORT, () => {
-    console.log(`Server running on port ${PORT}`)
-});
+module.exports = app
