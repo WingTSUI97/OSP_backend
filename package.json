@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "jest test/app.test.js --testTimeout=10000",
+    "test": "jest --testTimeout=10000",
+    "test:unit": "jest test/*.test.js --testTimeout=10000",
+    "test:integration": "jest test/app.test.js --testTimeout=10000",
+    "test:watch": "jest --watch --testTimeout=10000",
+    "test:coverage": "jest --coverage --testTimeout=10000",
     "serve": "node src/server.js",
     "start": "node src/server.js",
     "dev": "nodemon src/server.js"
@@ -23,5 +27,24 @@
     "mongodb-memory-server": "^10.2.1",
     "nodemon": "^3.1.10",
     "supertest": "^7.1.4"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/server.js",
+      "!src/config/dbConnect.js"
+    ],
+    "coverageDirectory": "coverage",
+    "coverageReporters": [
+      "text",
+      "lcov",
+      "html"
+    ],
+    "testMatch": [
+      "**/test/**/*.test.js"
+    ],
+    "setupFilesAfterEnv": ["<rootDir>/test/setup.js"],
+    "verbose": true
   }
 }

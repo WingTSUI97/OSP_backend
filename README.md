@@ -27,6 +27,7 @@ Build a small RESTful API server for creating surveys, retrieving them by a publ
    MONGO_URI=your_mongodb_connection_string
    ADMIN_API_KEY=YOUR_ADMIN_API_KEY_here
    ```
+-  `npm run dev`
 
 
 ## API Description
