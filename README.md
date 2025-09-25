@@ -52,7 +52,7 @@ Follow these steps to set up and run the project locally.
    ```
  - Production Mode:
    ```bash
-      npm run dev
+      npm run start
    ```  
    The server will be running at http://localhost:7001 by default.
 -  `npm run test:coverage` → to test with coverage
