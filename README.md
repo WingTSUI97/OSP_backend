@@ -25,7 +25,6 @@ This project is a RESTful API server.  It allows for the creation, management, a
 
 ## Installation
 Follow these steps to set up and run the project locally.
-- <s>(optional) Install [NodeJS](https://nodejs.org/en) if needed </s>
 1. Clone the repository:
    ```bash
    git clone https://github.com/WingTSUI97/OSP_backend

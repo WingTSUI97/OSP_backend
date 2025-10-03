@@ -1,5 +1,3 @@
-// OSP_backend/test/responseController.test.js
-
 // Mock the database connection
 jest.mock('../src/config/dbConnect', () => ({
     dbConnect: jest.fn(() => console.log('Mock DB connection'))
